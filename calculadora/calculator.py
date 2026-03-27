@@ -4,13 +4,18 @@ class Calculator:
         return a + b
 
     def subtract(self, a: float, b: float) -> float:
-        # TODO(aluno): implementar subtracao.
-        raise NotImplementedError("Metodo subtract ainda nao foi implementado.")
+        """Subtrai b de a e retorna o resultado."""
+        return a - b
 
     def multiply(self, a: float, b: float) -> float:
-        # TODO(aluno): implementar multiplicacao.
-        raise NotImplementedError("Metodo multiply ainda nao foi implementado.")
+        """Multiplica a por b e retorna o resultado."""
+        return a * b
 
     def divide(self, a: float, b: float) -> float:
-        # TODO(aluno): implementar divisao e tratar divisao por zero.
-        raise NotImplementedError("Metodo divide ainda nao foi implementado.")
+        """Divide a por b e retorna o resultado.
+
+        Lanca ZeroDivisionError se b for zero.
+        """
+        if b == 0:
+            raise ZeroDivisionError("Divisao por zero nao permitida.")
+        return a / b
